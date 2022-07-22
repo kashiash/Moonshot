@@ -20,8 +20,8 @@ struct ContentView: View {
         
         
         ScrollView{
-            LazyVGrid(columns: layout){
-                ForEach(0..<10000){
+            LazyHGrid(rows: layout){
+                ForEach(0..<1000){
                     Text("Item \($0)")
                       //  .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
