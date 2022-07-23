@@ -10,35 +10,46 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
 
-        
-        let layout = [
-            GridItem(.adaptive(minimum: 80, maximum: 120)),
-            GridItem(.adaptive(minimum: 80, maximum: 120)),
-            GridItem(.adaptive(minimum: 80, maximum: 120))
+        let astronauts: [String: Astronaut] = Bundle.main.decode("astronauts.json")
+        let missions: [Mission] = Bundle.main.decode("missions.json")
+      
+        let columns = [
+            GridItem(.adaptive(minimum: 150))
         ]
-            
         
         
-        ScrollView{
-            LazyHGrid(rows: layout){
-                ForEach(0..<1000){
-                    Text("Item \($0)")
-                      //  .textFieldStyle(RoundedBorderTextFieldStyle())
+        NavigationView {
+            ScrollView {
+                LazyVGrid(columns: columns) {
+                    ForEach(missions) { mission in
+                        NavigationLink {
+                            Text("Detail view")
+                        } label: {
+                            VStack {
+                                Image(mission.image)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 100, height: 100)
+
+                                VStack {
+                                    Text(mission.displayName)
+                                        .font(.headline)
+                                    Text(mission.formattedLaunchDate)
+                                        .font(.caption)
+                                }
+                                .padding(.vertical)
+                                .frame(maxWidth: .infinity)
+                                .background(.lightBackground)
+                            }
+                        }
+                    }
                 }
             }
+            .navigationTitle("Moonshot")
         }
-    }
-}
+    }}
 
-struct User: Codable {
-    let name: String
-    let address: Address
-}
 
-struct Address: Codable {
-    let street: String
-    let city: String
-}
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
