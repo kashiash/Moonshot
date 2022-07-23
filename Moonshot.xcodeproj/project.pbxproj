@@ -13,6 +13,7 @@
 		A31D6ED3288BCD5A00348785 /* missions.json in Resources */ = {isa = PBXBuildFile; fileRef = A31D6ED2288BCD5A00348785 /* missions.json */; };
 		A31D6ED5288BCE3E00348785 /* Mission.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D6ED4288BCE3E00348785 /* Mission.swift */; };
 		A31D6ED7288BE58700348785 /* Color-Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D6ED6288BE58700348785 /* Color-Theme.swift */; };
+		A31D6F0F288C86E800348785 /* MissionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31D6F0E288C86E800348785 /* MissionView.swift */; };
 		A3A13FC928857EB800EF0AC8 /* MoonshotApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A13FC828857EB800EF0AC8 /* MoonshotApp.swift */; };
 		A3A13FCB28857EB800EF0AC8 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3A13FCA28857EB800EF0AC8 /* ContentView.swift */; };
 		A3A13FCD28857EBA00EF0AC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A3A13FCC28857EBA00EF0AC8 /* Assets.xcassets */; };
@@ -26,6 +27,7 @@
 		A31D6ED2288BCD5A00348785 /* missions.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = missions.json; sourceTree = "<group>"; };
 		A31D6ED4288BCE3E00348785 /* Mission.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mission.swift; sourceTree = "<group>"; };
 		A31D6ED6288BE58700348785 /* Color-Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color-Theme.swift"; sourceTree = "<group>"; };
+		A31D6F0E288C86E800348785 /* MissionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MissionView.swift; sourceTree = "<group>"; };
 		A3A13FC528857EB800EF0AC8 /* Moonshot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Moonshot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A3A13FC828857EB800EF0AC8 /* MoonshotApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoonshotApp.swift; sourceTree = "<group>"; };
 		A3A13FCA28857EB800EF0AC8 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -65,6 +67,7 @@
 			children = (
 				A3A13FC828857EB800EF0AC8 /* MoonshotApp.swift */,
 				A3A13FCA28857EB800EF0AC8 /* ContentView.swift */,
+				A31D6F0E288C86E800348785 /* MissionView.swift */,
 				A31D6ECC288BCC9A00348785 /* Astronaut.swift */,
 				A31D6ED4288BCE3E00348785 /* Mission.swift */,
 				A31D6ECE288BCCC500348785 /* Bundle-Decodable.swift */,
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A31D6F0F288C86E800348785 /* MissionView.swift in Sources */,
 				A31D6ECD288BCC9A00348785 /* Astronaut.swift in Sources */,
 				A31D6ED7288BE58700348785 /* Color-Theme.swift in Sources */,
 				A3A13FCB28857EB800EF0AC8 /* ContentView.swift in Sources */,
@@ -288,6 +292,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Moonshot/Preview Content\"";
@@ -318,6 +323,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = NO;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Moonshot/Preview Content\"";
